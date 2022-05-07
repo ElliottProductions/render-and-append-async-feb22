@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -35,4 +36,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cryptid-card {
+  box-shadow: var(--shadow);
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10%;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: white;
+  width: 320px;
+
+}
+
+.cryptid-card img {
+  width: 300px;
+}
+.cryptid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+
+
+
+.cryptid-details > img {
+  width: 300px;
+}
+
+.cryptid-details > ol {
+  font-size: 15px;
+}
+
+.cryptid-details > p {
+  margin: 5px;
+  padding: 10px;
+}
+
+.cryptid-details {
+  background-color: rgb(0, 0, 0);
+  color:coral;
+  padding: 10px;
+  width: 320px;
+  border-radius: 5%;
+}
+
+.cryptid-details > img {
+  border-radius: 10%;
+}
+
+.details-body {
+  background-color: rgb(39, 39, 41);
+}
+
+.aka-box {
+  margin: 5px;
 }

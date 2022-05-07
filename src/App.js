@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import { getCryptids, getAliens, getShips, getUtensils } from './services/fetch-utils.js';
+import CryptidsList from './CryptidsList.js';
+import AlienList from './AlienList.js';
+import ShipsList from './ShipsList.js';
+import UtensilsList from './UtensilsList.js';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [cryptids, setCryptids] = useState([]);
+  const [aliens, setAliens] = useState([]);
+  const [ships, setShips] = useState([]);
+  const [utensils, setUtensils] = useState([]);
+
+  useEffect(async () => {
+
+    const cryptidResponse = await getCryptids();
+    setCryptids(cryptidResponse);
+
+    const alienResponse = await getAliens();
+    setAliens(alienResponse);
+
+    const shipResponse = await getShips();
+    setShips(shipResponse);
+
+    const utensilResponse = await getUtensils();
+    setUtensils(utensilResponse);
+    
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CryptidsList cryptids={cryptids}/>
+      <AlienList aliens={aliens}/>
+      <ShipsList ships={ships}/>
+      <UtensilsList utensils={utensils}/>
     </div>
   );
 }
