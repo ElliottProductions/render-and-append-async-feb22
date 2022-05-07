@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-export const client = createClient(
+export const client = createClient(/* eslint-disable */
   process.env.REACT_APP_SUPABASE_URL,
   process.env.REACT_APP_SUPABASE_KEY
 );
