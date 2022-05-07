@@ -6,7 +6,6 @@ export default function CryptidsList({ cryptids }) {
   return (
     <div>
       {cryptids.map((cryptid) => <Cryptiditem key={Math.floor(Math.random() * 10000)} props={cryptid} />)}
-      {console.log(cryptids)}
     </div>
   );
 }
