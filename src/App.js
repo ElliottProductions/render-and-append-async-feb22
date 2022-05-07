@@ -13,7 +13,6 @@ function App() {
     setCryptids(cryptidResponse);
     
   }, []);
-  console.log(cryptids);
 
   return (
     <div className="App">
