@@ -23,3 +23,11 @@ export async function getShips() {
 
   return response.body;
 }
+
+export async function getUtensils() {
+  const response = await client
+    .from('utensils')
+    .select('*');
+
+  return response.body;
+}
