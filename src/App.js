@@ -1,6 +1,7 @@
 import { getCryptids, getAliens, getShips } from './services/fetch-utils.js';
 import CryptidsList from './CryptidsList.js';
 import AlienList from './AlienList.js';
+import ShipsList from './ShipsList.js';
 import './App.css';
 import { useEffect, useState } from 'react';
 
@@ -17,7 +18,7 @@ function App() {
     const alienResponse = await getAliens();
     setAliens(alienResponse);
 
-    const shipResponse = await getShip();
+    const shipResponse = await getShips();
     setShips(shipResponse);
     
   }, []);
